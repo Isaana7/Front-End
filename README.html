@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviar Código</title>
-</head>
-<body>
+ redirecionar
+            window.location.href = 'https://youtu.be/3dIupodTc_4?si=q7ROGrT2PYDsIaUz'; // Substitua pelo seu link desejado
+        });
 
-    <button id="enviarCodigo">Enviar Código</button>
-
-    <script>
         document.getElementById('enviarCodigo').addEventListener('click', function() {
             const codigoHTML = `<h1>Olá, Mundo!</h1>`; // Seu código HTML aqui
 
@@ -17,7 +9,39 @@
             fetch('https://exemplo.com/api/receber-codigo', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json'<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Fronte En</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="">
+    <style>
+        .body {
+            background-color: white; 
+            color: blue;
+        } 
+    </style>
+</head>
+<body class="body">
+    <form id="meuFormulario">
+        <fieldset>
+            <legend>Primeiro Formulário</legend>
+            <br>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" placeholder="Usuário" minlength="5" maxlength="10" required><br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Senha" minlength="5" maxlength="10" required><br>
+            <br>
+            <input type="submit" value="Registrar">
+        </fieldset>
+    </form>
+    <button id="enviarCodigo">Enviar Código</button>
+
+    <script>
+        document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Aqui você pode adicionar qualquer lógica que desejar antes de
                 },
                 body: JSON.stringify({ codigo: codigoHTML })
             })
@@ -30,6 +54,5 @@
             });
         });
     </script>
-
 </body>
 </html>
