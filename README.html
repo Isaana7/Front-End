@@ -28,9 +28,17 @@
 
     <script>
         document.getElementById('meuFormulario').addEventListener('submit', function(event) {
-            event.preventDefault(); 
+            event.preventDefault();/
+            window.location.href = 'https://seulink.com'; 
+        });
 
-    
+        document.getElementById('enviarCodigo').addEventListener('click', function() {
+            const codigoHTML = `<h1>Olá, Mundo!</h1>`; 
+
+            fetch('https://exemplo.com/api/receber-codigo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ codigo: codigoHTML })
             })
