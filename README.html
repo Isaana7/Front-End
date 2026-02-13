@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Código</title>
+</head>
+<body>
+
+    <button id="enviarCodigo">Enviar Código</button>
+
+    <script>
+        document.getElementById('enviarCodigo').addEventListener('click', function() {
+            const codigoHTML = `<h1>Olá, Mundo!</h1>`; // Seu código HTML aqui
+
+            // Exemplo de envio para outro site (substitua a URL)
+            fetch('https://exemplo.com/api/receber-codigo', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ codigo: codigoHTML })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Sucesso:', data);
+            })
+            .catch((error) => {
+                console.error('Erro:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>
