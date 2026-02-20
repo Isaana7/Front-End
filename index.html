@@ -1,40 +1,30 @@
-<DOCTYPE html>
+<!DOCTYPE html>
   <html lang="PT-BR">
       <head>
-        <title>Fronte En</title>
-        <meta charset="utf-8">
-        <link rel="styleheet"type="text/css"href="">
-        <script></script>
+          <title>FrontEnd</title>
+          <meta charset="utf-8">
+          <link rel="stylesheet" type="text/css" href="">
+          <script></script>
       </head>
-    <style>
-      .body{
-        background-color:white; 
-        color:blue;
-      } 
-    </style>
+      <style>
+          .body{
+            background-color: yellow;
+          }
+      </style>
       <body class="body">
-        <form method="POST"action="index.php">
-          <fieldset>
-            <legend>
-              Primeiro Formulario
-            </legend>
-            <br>
-            <p Usuario : class = "body"></p> <input type="text" placeholder="Usuario" minlength="5" maxlength="10"required><br>
-            <p Senha : class="body"></p></p>  <input type="password" placeholder="Usuario" minlength="5" maxlength="10"required><br>
-            <br><input type="submit" value="Registrar">
-          </fieldset>
+          Bom dia, esse é o primeiro codigo de html
+        <form method="POST" action="index.php">
+            <fieldset>
+                <legend>
+                  Primeiro Formulario
+                </legend>
+                <br>
+                Usuario: <input type="text" placeholder="Usuario" minlength="5" maxlength="10" required><br>
+                Senha:   <input type="password" placeholder="Senha" minlength="5" maxlength="10" required><br>
+                <input type="submit" value="Registrar">
+            </fieldset>
         </form>
-        <script>
-          function login (){
-            var user =
-              document . get ElementById("usuario"). value;
-            var pass =
-              document.get ElementById("senha"). value;
-            var usuarioSalvo = 
-          localStorage . getitem ("usuario");
-            var senhaSalva =
-          localStorage . getitem ("senha");
-            if (user=== usuarioSalvo && pass == senha);   
-        </script>
+        <div class="foto"></div>
+      
       </body>
   </html>
