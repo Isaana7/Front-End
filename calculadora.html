@@ -33,15 +33,17 @@
             background-color:white;
             border:2px solid green;
         }
-
-
-
-
-
-
-
     </style>
+    <script>
+      function adicionar(valor){
+        document.getElementById("campo").value += valor;   
+      }
+      function limpar(){
+        document.getElementById("campo").value = "";
 
+
+      }
+    </script>
 </head>
 <body>
     
@@ -50,33 +52,31 @@
             Calculadora Isaac 
         </legend>
         <input type="text"id="campo"class="campo"><br><br>
-        <button class="botão">1</button>
-        <button class="botão">2</button>
-        <button class="botão">3</button>
-        <button class="botãoo">-</button>
-        <button class="botãoo">+</button>
+        <button class="botão" onclick="adicionar('1')">1</button>
+        <button class="botão" onclick="adicionar('2')">2</button>
+        <button class="botão" onclick="adicionar('3')">3</button>
+        <button class="botãoo" onclick="adicionar('-')">-</button>
+        <button class="botãoo" onclick="adicionar('+')">+</button>
         <br>
-        <button class="botão">5</button>
-        <button class="botão">6</button>
-        <button class="botão">7</button>
-        <button class="botão1">=</button>
-        <button class="botãoo">^</button>
+        <button class="botão" onclick="adicionar('5')">5</button>
+        <button class="botão" onclick="adicionar('6')">6</button>
+        <button class="botão" onclick="adicionar('7')">7</button>
+        <button class="botão1" onclick="adicionar('=')">=</button>
+        <button class="botãoo" onclick="adicionar('^')">^</button>
         <br>
-        <button class="botão">8</button>
-        <button class="botão">9</button>
-        <button class="botão">0</button>
-        <button class="botãoo">/</button>
-        <button class="botãoo">(</button>
+        <button class="botão" onclick="adicionar('8')">8</button>
+        <button class="botão" onclick="adicionar('9')">9</button>
+        <button class="botão" onclick="adicionar('0')">0</button>
+        <button class="botãoo" onclick="adicionar('/')">/</button>
+        <button class="botãoo" onclick="adicionar('(')">(</button>
         <br>
-        <button class="botãoo">)</button>
-        <button class="botãoo">*</button>
-        <button class="botãoo">#</button>
-        <button class="botãoo">%</button>
-        <button class="botãooo">C</button>
+        <button class="botãoo" onclick="adicionar(')')">)</button>
+        <button class="botãoo" onclick="adicionar('*')">*</button>
+        <button class="botãoo" onclick="adicionar('#')">#</button>
+        <button class="botãoo" onclick="adicionar('%')">%</button>
+        <button class="botãooo" onclick="limpar()">C</button>
         <br>
-        <button class="botãoo">x</button>
-        <button class="botão">1</button>
-        <button class="botão">1</button>
+        <button class="botãoo" onclick="adicionar('x')">x</button>
     </fieldset>
     
 </body>
