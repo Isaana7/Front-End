@@ -40,7 +40,16 @@
       }
       function limpar(){
         document.getElementById("campo").value = "";
+      }
+      function calcular(){
+        var visor = document.getElementById("campo");
+        try{
+            campo.value = eval*(campo.value);
 
+        }catch(error){
+            campo.value = "Erro";
+
+        }
 
       }
     </script>
@@ -61,7 +70,7 @@
         <button class="botão" onclick="adicionar('5')">5</button>
         <button class="botão" onclick="adicionar('6')">6</button>
         <button class="botão" onclick="adicionar('7')">7</button>
-        <button class="botão1" onclick="adicionar('=')">=</button>
+        <button class="botão1" onclick="calcular()">=</button>
         <button class="botãoo" onclick="adicionar('^')">^</button>
         <br>
         <button class="botão" onclick="adicionar('8')">8</button>
@@ -71,8 +80,8 @@
         <button class="botãoo" onclick="adicionar('(')">(</button>
         <br>
         <button class="botãoo" onclick="adicionar(')')">)</button>
-        <button class="botãoo" onclick="adicionar('*')">*</button>
-        <button class="botãoo" onclick="adicionar('#')">#</button>
+        <button class="botãoo" onclick="adicionar(',')">,</button>
+        <button class="botãoo" onclick="adicionar('.')">.</button>
         <button class="botãoo" onclick="adicionar('%')">%</button>
         <button class="botãooo" onclick="limpar()">C</button>
         <br>
