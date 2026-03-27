@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1{
+    text-align: center;
+}
+.banner ul{
+    list-style: none;
+    background-color: rgb(43, 49, 44);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.banner a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.banner a:hover{
+    background-color: black;
+}
+.banner li{
+    float: left;
+}
+
+
