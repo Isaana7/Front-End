@@ -1,127 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia do Isaac</title>
+    <title>Calculadora</title>
+
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        .campo {
+            background-color: white;
+            border: 5px solid green;
+            width: 250px;
+            height: 40px;
+            font-size: 20px;
         }
 
-        header {
-            background: linear-gradient(0deg, rgb(34, 195, 61) 0%, rgb(104, 253, 45) 100%);
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        h1, h5 {
-            margin: 5px 0;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        h1 { color: #2e5b00; font-size: 2rem; }
-        h5 { color: #004d1a; font-size: 0.8rem; }
-
-          .menu_principal {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0 0;
-            display: flex;
-            justify-content: center;
-            background: rgba(0,0,0,0.1);
-        }
-
-        .menu_principal > li { position: relative; }
-
-        .menu_principal a, .menu_principal li {
-            text-decoration: none;
-            color: #000;
-            padding: 12px 20px;
-            display: block;
+        .botão,
+        .botãoo,
+        .botão1,
+        .botãooo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid green;
+            font-size: 18px;
             cursor: pointer;
+        }
+
+        .botão:hover,
+        .botãoo:hover,
+        .botão1:hover,
+        .botãooo:hover {
+            background-color: lightgreen;
+            transition: 0.2s;
+        }
+
+        fieldset {
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        legend {
+            font-size: 25px;
             font-weight: bold;
         }
-        .dropdown, .menu {
-            display: none;
-            position: absolute;
-            background-color: white;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            border: 1px solid #ccc;
-            min-width: 180px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-        }
-        .menu_principal > li:hover > .dropdown { display: block; top: 100%; left: 0; }
-        .dropdown > li:hover > .menu { display: block; top: 0; left: 100%; }
-
-        .dropdown li:hover, .menu li:hover { background-color: #f0f0f0; }
-        main {
-            background-color: #4b0082; 
-            color: white;
-            flex: 1; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        footer {
-            background-color: rgb(17, 128, 0);
-            height: 50px;
-            width: 100%;
-        }
     </style>
+
+    <script>
+        function adicionar(valor) {
+            document.getElementById("campo").value += valor;
+        }
+
+        function limpar() {
+            document.getElementById("campo").value = "";
+        }
+
+        function calcular() {
+            var campo = document.getElementById("campo");
+
+            try {
+                campo.value = eval(campo.value);
+            }
+
+            catch (error) {
+                campo.value = "Erro";
+            }
+        }
+    </script>
 </head>
+
 <body>
-    <header>
-        <h1>BARBEARIA DO ISAAC</h1>
-        <h5>Te deixando bonitinho desde 2000000000000000000 a.c</h5>
-        
-        <ul class="menu_principal">
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Serviços</a>
-                <ul class="dropdown">
-                    <li>
-                        Corte Masculino ▸
-                        <ul class="menu">
-                            <li>Cabelo</li>
-                            <li>Barba</li>
-                            <li>Sobrancelha</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Corte Feminino ▸
-                        <ul class="menu">
-                            <li>Corte</li>
-                            <li>Hidratação</li>
-                            <li>Pintura</li>
-                            <li>Sobrancelha</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </header>
 
-    <main>
-        <div class="conteudo">
-            <h1>Barbearia do Isaac</h1>
-            <p>O melhor corte da região!</p>
-        </div>
-        <div class="fotoHome"></div>
-    </main>
+    <fieldset>
 
-    <footer></footer>
+        <legend>
+            Calculadora Isaac
+        </legend>
+
+        <input type="text" id="campo" class="campo">
+
+        <br><br>
+
+        <button class="botão" onclick="adicionar('1')">1</button>
+        <button class="botão" onclick="adicionar('2')">2</button>
+        <button class="botão" onclick="adicionar('3')">3</button>
+        <button class="botãoo" onclick="adicionar('-')">-</button>
+        <button class="botãoo" onclick="adicionar('+')">+</button>
+
+        <br><br>
+
+        <button class="botão" onclick="adicionar('4')">4</button>
+        <button class="botão" onclick="adicionar('5')">5</button>
+        <button class="botão" onclick="adicionar('6')">6</button>
+        <button class="botãoo" onclick="adicionar('/')">/</button>
+        <button class="botãoo" onclick="adicionar('*')">x</button>
+
+        <br><br>
+
+        <button class="botão" onclick="adicionar('7')">7</button>
+        <button class="botão" onclick="adicionar('8')">8</button>
+        <button class="botão" onclick="adicionar('9')">9</button>
+        <button class="botãoo" onclick="adicionar('(')">(</button>
+        <button class="botãoo" onclick="adicionar(')')">)</button>
+
+        <br><br>
+
+        <button class="botão" onclick="adicionar('0')">0</button>
+        <button class="botãoo" onclick="adicionar('.')">.</button>
+        <button class="botãoo" onclick="adicionar('%')">%</button>
+        <button class="botão1" onclick="calcular()">=</button>
+        <button class="botãooo" onclick="limpar()">C</button>
+
+    </fieldset>
+
 </body>
+
 </html>
